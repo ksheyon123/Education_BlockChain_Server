@@ -1,8 +1,12 @@
 var express = require('express');
 var routes = express.Router();
 
-const route_1 = require('./route_1');
+const indexRouter = require('./index');
+const mentorRouter = require('./mentor');
+const mentiRouter = require('./menti');
 
-routes.use(route_1);
+routes.use(mentorRouter);
+routes.use(mentiRouter);
+routes.use(indexRouter);
 
 module.exports = routes;
