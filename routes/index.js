@@ -51,8 +51,20 @@ indexRouter.post('/api/board/all:/id', async (req, res) => {
 //상담 신청
 indexRouter.post('/api/board/register', async (req, res) => {
     try {
-        console.log(req.body);
-        req.session.user.user
+        //복수 응답 데이터 분할 Func 필요
+        var specialty = req.body.specialty;
+        
+        mentorData = {
+            name: req.body.name,
+            location: req.body.location,
+            specialty: req.body.specialty,
+            lecture: req.body.lecture,
+            consulting: req.body.consulting,
+            career: req.body.career,
+            keyword: req.body.keyword,
+            code: req.body.code,
+        }
+
     } catch (err) {
 
     }
